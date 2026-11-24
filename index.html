@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071b2a">
+  <meta name="description" content="ลอยกระทงออนไลน์ ส่งคำอธิษฐานให้ลอยไปกับสายน้ำ">
+  <title>ลอยกระทงออนไลน์ | คืนวันเพ็ญ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Sarabun:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="คืนวันเพ็ญ หน้าแรก"><span class="brand-mark">✦</span> คืนวันเพ็ญ</a>
+    <span class="top-note">ประเพณีไทย · ลอยกระทงออนไลน์</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="moon" aria-hidden="true"></div>
+      <p class="eyebrow">✧ คืนพระจันทร์เต็มดวง ✧</p>
+      <h1>ลอยกระทง<span>ออนไลน์</span></h1>
+      <p class="intro">ขอขมาพระแม่คงคา และส่งความปรารถนาดี<br class="desktop-only"> ให้ลอยไปกับสายน้ำในค่ำคืนอันงดงาม</p>
+      <a class="scroll-cue" href="#create">เริ่มลอยกระทง <span>↓</span></a>
+    </section>
+
+    <section class="workspace" id="create">
+      <div class="section-heading">
+        <p class="eyebrow">YOUR LITTLE WISH</p>
+        <h2>สร้างกระทงของคุณ</h2>
+        <p>เลือกกระทง เขียนคำอธิษฐาน แล้วปล่อยให้ลอยไป</p>
+      </div>
+
+      <div class="content-grid">
+        <form class="wish-form" id="wishForm">
+          <div class="field-group">
+            <label>01 <span>เลือกรูปแบบกระทง</span></label>
+            <div class="krathong-options" role="group" aria-label="เลือกรูปแบบกระทง">
+              <button class="krathong-option selected" type="button" data-style="lotus" aria-pressed="true">
+                <span class="krathong-art lotus-art" aria-hidden="true">🪷</span>
+                <span>ดอกบัว</span><small>อ่อนหวาน</small>
+              </button>
+              <button class="krathong-option" type="button" data-style="banana" aria-pressed="false">
+                <span class="krathong-art banana-art" aria-hidden="true">🌼</span>
+                <span>ใบตอง</span><small>ธรรมชาติ</small>
+              </button>
+              <button class="krathong-option" type="button" data-style="gold" aria-pressed="false">
+                <span class="krathong-art gold-art" aria-hidden="true">✨</span>
+                <span>สีทอง</span><small>เปล่งประกาย</small>
+              </button>
+            </div>
+          </div>
+
+          <div class="field-group">
+            <label for="wishName">02 <span>ชื่อของคุณ</span></label>
+            <input id="wishName" name="name" type="text" maxlength="24" placeholder="เช่น มะลิ" required>
+          </div>
+
+          <div class="field-group">
+            <label for="wishText">03 <span>คำอธิษฐาน</span></label>
+            <textarea id="wishText" name="wish" maxlength="120" rows="4" placeholder="ขอให้ปีนี้เต็มไปด้วยความสุข..." required></textarea>
+            <div class="field-hint"><span>เขียนคำขอพรจากใจ</span><span id="charCount">0/120</span></div>
+          </div>
+
+          <button class="float-button" type="submit"><span>🪷</span> ลอยกระทงของฉัน <span>→</span></button>
+          <p class="form-note">คำอธิษฐานของคุณจะแสดงบนสายน้ำนี้เท่านั้น</p>
+        </form>
+
+        <div class="river-panel">
+          <div class="river-topline"><span><i></i> สายน้ำแห่งคำอธิษฐาน</span><span id="wishTotal">0 กระทง</span></div>
+          <div class="river" id="river" aria-live="polite">
+            <div class="river-reflection"></div>
+            <div class="empty-state" id="emptyState">
+              <span>🌙</span>
+              <p>สายน้ำกำลังรอคำอธิษฐานของคุณ</p>
+              <small>กระทงที่ลอยแล้วจะปรากฏตรงนี้</small>
+            </div>
+          </div>
+          <div class="river-footer"><span>✦</span> ขอให้ทุกคำอธิษฐานเป็นจริง <span>✦</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><span>คืนวันเพ็ญ</span> · สืบสานประเพณีไทยอย่างใส่ใจสิ่งแวดล้อม</footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>

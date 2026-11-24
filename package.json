@@ -1,0 +1,9 @@
+{
+  "name": "loy-krathong-online",
+  "version": "1.0.0",
+  "private": true,
+  "description": "เว็บไซต์ลอยกระทงออนไลน์",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
